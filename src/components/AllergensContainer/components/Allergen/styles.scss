@@ -1,0 +1,11 @@
+@import '../../../../index.scss';
+
+.allergen {
+  height: 1rem;
+  align-items: center;
+  margin: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

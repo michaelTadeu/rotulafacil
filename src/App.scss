@@ -1,0 +1,25 @@
+@import 'index.scss';
+
+.App {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  .notification {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgb(219, 157, 157);
+    color: rgb(119, 2, 2);
+    opacity: 0.6;
+    z-index: 1;
+    @media (max-width: 799px) {
+      visibility: visible;
+    }
+  }
+}

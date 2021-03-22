@@ -1,0 +1,25 @@
+@import '../../../../index.scss';
+
+.label__ingredients__picker__added {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  &__title {
+    font-family: $font-family-secondary;
+    letter-spacing: 0.7px;
+    color: $secondary-title;
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin: 1rem 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+}

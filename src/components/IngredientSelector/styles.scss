@@ -1,0 +1,87 @@
+@import '../../index.scss';
+
+.ingredients-selector {
+  &__title {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #add-custom-label {
+    width: fit-content;
+  }
+
+  &__picker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    &__cont {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      &__search {
+        padding-left: 2.3rem;
+        width: 100%;
+        background-image: url('../../assets/search.svg');
+        background-repeat: no-repeat;
+        background-position: 1rem 49%;
+        margin: 0 auto;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__add,
+    &__remove {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__add {
+      background: $add;
+    }
+
+    &__remove {
+      background: $remove;
+    }
+
+    &__add__button,
+    &__remove__button {
+      color: white;
+      background: transparent;
+      font-size: 1.7rem;
+      line-height: 1.1rem;
+      width: 100%;
+      border-radius: 50%;
+      height: 100%;
+      padding: 0;
+      padding-bottom: 3px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.733);
+        opacity: 0.6;
+        color: white;
+      }
+    }
+  }
+}

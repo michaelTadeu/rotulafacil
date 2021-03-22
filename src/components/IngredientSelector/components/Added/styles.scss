@@ -1,0 +1,63 @@
+@import '../../../../index.scss';
+
+.ingredient {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  min-width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: $ingredient;
+  animation: fade 1.3s linear both;
+  cursor: pointer;
+  @media (max-width: 1400px) {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  p {
+    margin-right: 0.6rem;
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__remove {
+    border: none;
+    font-size: 1rem;
+    line-height: 0.5rem;
+    background: transparent;
+    outline: none;
+    background: url('../../../../assets/x.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 0.9rem;
+    height: 0.9rem;
+    cursor: pointer;
+    @media (max-width: 1400px) {
+      height: 0.6rem;
+      width: 0.6rem;
+    }
+
+    &:hover {
+      background: url('../../../../assets/x-hover.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    background: #bdbdbd;
+  }
+  50% {
+    background: #dddddd96;
+  }
+  100% {
+    background: $ingredient;
+  }
+}

@@ -1,0 +1,99 @@
+@import '../../index.scss';
+
+.company {
+  position: relative;
+  margin: 0;
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .save {
+      background: $ingredient;
+    }
+  }
+
+  &__list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 23.4%));
+    grid-gap: 1rem;
+
+    .add {
+      background: $ingredient;
+
+      &:hover {
+        color: gray;
+      }
+    }
+
+    &__item {
+      border-radius: 3px;
+      padding: 1.5rem;
+      text-align: center;
+      background-color: white;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06);
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.37);
+        color: gray;
+      }
+
+      &.active {
+        background: $active;
+        font-weight: bold;
+
+        .company__list__item__delete {
+          background-image: url('../../assets/x-white.svg');
+          &:hover {
+            background-image: url('../../assets/x-hover.svg');
+          }
+        }
+      }
+
+      &__delete {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background-image: url('../../assets/x.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1rem;
+        height: 1rem;
+        border: none;
+        background-color: transparent;
+        border-radius: 50%;
+        outline: none;
+
+        &:hover {
+          background-image: url('../../assets/x-hover.svg');
+        }
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+
+  small {
+    width: 80%;
+    position: absolute;
+    top: 3.5rem;
+    color: red;
+    z-index: 1;
+  }
+}
